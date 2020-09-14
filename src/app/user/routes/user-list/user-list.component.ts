@@ -1,8 +1,12 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
 import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
 import { User } from '../../models/user.model';
-import { UserService } from '../../services/user.service';
+import { takeUntil } from 'rxjs/operators';
+
+import * as fromApp from '../../../app.state'
+import * as fromUser from '../../ngrx/user.reducer'
+import * as UserAction from '../../ngrx/user.action'
 
 @Component({
   selector: 'app-user-list',
@@ -12,20 +16,18 @@ import { UserService } from '../../services/user.service';
 export class UserListComponent implements OnInit, OnDestroy {
 
   private ngDestroyed = new Subject<any>();
-  private userService: UserService;
-  
-  users: User[];
 
-  constructor(userService: UserService) {
-    this.userService = userService;
-  }
+  users: User[] = [];
+
+  constructor(private store: Store<fromApp.AppState>) { }
 
   ngOnInit(): void {
-    this.userService.getUsers()
+    this.store.dispatch(UserAction.fetchUser());
+    this.store.select(fromUser.selectArray)
     .pipe(takeUntil(this.ngDestroyed))
     .subscribe((users: User[]) => {
       this.users = users;
-    });
+    })
   }
 
   ngOnDestroy(): void {
