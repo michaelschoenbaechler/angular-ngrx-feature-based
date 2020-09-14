@@ -8,9 +8,10 @@ import { EffectsModule } from '@ngrx/effects';
 import { UserEffects } from './ngrx/user.effects';
 
 import * as fromUser from './ngrx/user.reducer';
+import { UserItemComponent } from './components/user-item/user-item.component';
 
 @NgModule({
-  declarations: [UserListComponent, UserDetailComponent],
+  declarations: [UserListComponent, UserDetailComponent, UserItemComponent],
   imports: [
     CommonModule,
     UserRoutingModule,
