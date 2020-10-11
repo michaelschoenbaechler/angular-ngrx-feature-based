@@ -6,11 +6,11 @@ import { TodoListComponent } from './routes/todo-list/todo-list.component';
 const routes: Routes = [
     { path: 'list', component: TodoListComponent },
 
-    //{ path: 'path/:routeParam', component: MyComponent },
-    //{ path: 'staticPath', component: ... },
-    //{ path: '**', component: ... },
-    //{ path: 'oldPath', redirectTo: '/staticPath' },
-    //{ path: ..., component: ..., data: { message: 'Custom' }
+    // { path: 'path/:routeParam', component: MyComponent },
+    // { path: 'staticPath', component: ... },
+    // { path: '**', component: ... },
+    // { path: 'oldPath', redirectTo: '/staticPath' },
+    // { path: ..., component: ..., data: { message: 'Custom' }
 ];
 
 @NgModule({

@@ -23,7 +23,7 @@ export class UserEffects {
             .pipe(
                 takeUntil(this.initialize),
                 map((users: User[]) => UserAction.setUser({ users }))
-            )
+            );
         })
     ));
 

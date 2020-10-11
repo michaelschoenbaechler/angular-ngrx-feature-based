@@ -8,11 +8,11 @@ const routes: Routes = [
     { path: 'list', component: UserListComponent },
     { path: 'detail/:userId', component: UserDetailComponent },
 
-    //{ path: 'path/:routeParam', component: MyComponent },
-    //{ path: 'staticPath', component: ... },
-    //{ path: '**', component: ... },
-    //{ path: 'oldPath', redirectTo: '/staticPath' },
-    //{ path: ..., component: ..., data: { message: 'Custom' }
+    // { path: 'path/:routeParam', component: MyComponent },
+    // { path: 'staticPath', component: ... },
+    // { path: '**', component: ... },
+    // { path: 'oldPath', redirectTo: '/staticPath' },
+    // { path: ..., component: ..., data: { message: 'Custom' }
 ];
 
 @NgModule({

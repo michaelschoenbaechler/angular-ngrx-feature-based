@@ -25,7 +25,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     EffectsModule.forRoot(),
     !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
-  providers: [],  
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

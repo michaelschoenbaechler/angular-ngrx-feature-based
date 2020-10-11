@@ -4,9 +4,9 @@ import { Subject } from 'rxjs';
 import { User } from '../../models/user.model';
 import { takeUntil } from 'rxjs/operators';
 
-import * as fromApp from '../../../app.state'
-import * as fromUser from '../../ngrx/user.reducer'
-import * as UserAction from '../../ngrx/user.action'
+import * as fromApp from '../../../app.state';
+import * as fromUser from '../../ngrx/user.reducer';
+import * as UserAction from '../../ngrx/user.action';
 
 @Component({
   selector: 'app-user-list',
@@ -27,7 +27,7 @@ export class UserListComponent implements OnInit, OnDestroy {
     .pipe(takeUntil(this.ngDestroyed))
     .subscribe((users: User[]) => {
       this.users = users;
-    })
+    });
   }
 
   ngOnDestroy(): void {

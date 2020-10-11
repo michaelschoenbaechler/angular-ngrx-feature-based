@@ -1,14 +1,14 @@
 import { createEntityAdapter } from '@ngrx/entity';
 import { EntityAdapter, EntityState } from '@ngrx/entity/src/models';
-import { Action, createReducer, createSelector, on } from '@ngrx/store';
+import { Action, ActionReducer, createReducer, createSelector, on } from '@ngrx/store';
 import { AppState } from 'src/app/app.state';
 import { User } from '../models/user.model';
 import * as UserAction from './user.action';
 
 export interface State extends EntityState<User> {
-    selectedUserId: string,
-    loading: boolean
-};
+    selectedUserId: string;
+    loading: boolean;
+}
 
 export const selectUserId = (u: User) => u.lastName;
 export const adapter: EntityAdapter<User> = createEntityAdapter<User>({
@@ -26,12 +26,12 @@ export const selectFeature = (state: AppState) => state.user;
 export const selectArray = createSelector(
   selectFeature,
   (state) => selectAll(state)
-)
+);
 
 export const selectDictionary = createSelector(
   selectFeature,
   (state) => selectEntities(state)
-)
+);
 
 // reducer
 export const initialState: State = adapter.getInitialState({
@@ -53,7 +53,7 @@ const userReducer = createReducer(initialState,
         });
     })
 );
- 
-export function reducer(state: State | undefined, action: Action) {
+
+export function reducer(state: State | undefined, action: Action): any {
   return userReducer(state, action);
 }

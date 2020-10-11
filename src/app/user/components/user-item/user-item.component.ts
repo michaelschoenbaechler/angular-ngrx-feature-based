@@ -16,8 +16,8 @@ export class UserItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onClick() {
-    console.log("edit", this.user.firstName)
+  onClick(): void {
+    console.log('edit', this.user.firstName);
   }
 
 }
