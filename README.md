@@ -13,7 +13,7 @@ The architecture is feature based, which in my opinion is a better approach than
 
 Go to http://localhost:4200
 
-### Required Firebase Data
+### Required Firestore Data
 
 Collection: `User`
 
