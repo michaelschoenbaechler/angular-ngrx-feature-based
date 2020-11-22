@@ -7,7 +7,7 @@ import * as fromApp from 'src/app/app.state';
 import * as fromRouter from 'src/app/app-router.reducer';
 import * as fromUser from 'src/app/user/ngrx/user.reducer';
 import { User } from '../../models/user.model';
-import * as UserAction from "../../ngrx/user.action";
+import * as UserAction from '../../ngrx/user.action';
 
 @Component({
   selector: 'app-user-detail',

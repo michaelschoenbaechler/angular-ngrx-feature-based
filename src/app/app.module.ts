@@ -12,7 +12,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 
-import * as fromRouter from './app-router.reducer'
+import * as fromRouter from './app-router.reducer';
 
 @NgModule({
   declarations: [
