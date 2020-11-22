@@ -3,16 +3,16 @@
 A simple app with basic navigation. You can find list and detail views in the user module.
 The architecture is feature based, which in my opinion is a better approach than the common seen layer based architecture.
 
-### Prerequisites:
-- Firebase Account
+### Prerequisites
+- Firebase Account with user collection (as described below)
 
-### Run: 
+### Run
 - `npm install`
-- `npm run`
+- `npm start`
 
 go to http://localhost:4200
 
-### Firebase Collection:
+### Required Firebase Data
 
 Collection: `User`
 
