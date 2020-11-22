@@ -15,14 +15,14 @@ export class UserEffects {
 
     constructor(private actions$: Actions, private userService: UserService) { }
 
-    fetchUser$ = createEffect(() => this.actions$.pipe(
-        ofType(UserAction.fetchUser),
+    fetchUserList$ = createEffect(() => this.actions$.pipe(
+        ofType(UserAction.fetchUserList),
         map(() => this.initialize.next()),
         mergeMap(() => {
-            return this.userService.getUsers()
+            return this.userService.getUserList()
             .pipe(
                 takeUntil(this.initialize),
-                map((users: User[]) => UserAction.setUser({ users }))
+                map((users: User[]) => UserAction.setUserList({ users }))
             );
         })
     ));

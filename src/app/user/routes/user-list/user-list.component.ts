@@ -22,8 +22,8 @@ export class UserListComponent implements OnInit, OnDestroy {
   constructor(private store: Store<fromApp.AppState>) { }
 
   ngOnInit(): void {
-    this.store.dispatch(UserAction.fetchUser());
-    this.store.select(fromUser.selectArray)
+    this.store.dispatch(UserAction.fetchUserList());
+    this.store.select(fromUser.selectList)
     .pipe(takeUntil(this.ngDestroyed))
     .subscribe((users: User[]) => {
       this.users = users;

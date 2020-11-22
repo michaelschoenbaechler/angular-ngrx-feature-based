@@ -16,7 +16,7 @@ export class UserService {
         this.firestore = firestore;
     }
 
-    getUsers(): Observable<User[]> {
+    getUserList(): Observable<User[]> {
         return this.firestore.collection(USER_COLLECTION)
         .snapshotChanges()
         .pipe(

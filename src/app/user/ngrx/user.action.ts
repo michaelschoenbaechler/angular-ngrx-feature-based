@@ -1,11 +1,11 @@
 import { createAction, props } from '@ngrx/store';
 import { User } from '../models/user.model';
 
-export const fetchUser = createAction(
-    '[User] fetch user',
+export const fetchUserList = createAction(
+    '[User API] fetch user list',
 );
 
-export const setUser = createAction(
-    '[User] set user',
+export const setUserList = createAction(
+    '[User] set user list',
     props<{users: User[]}>()
 );
