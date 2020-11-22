@@ -1,27 +1,26 @@
-# AngularNgrxFeatureBased
+# Angular 10 Starter (NGRX, Lazy Loading Modules, Feature States) 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
+A simple app with basic navigation. You can find lists and detail views in user module.
+The architecture is feature based, which in my opinion is a better approach than layer based.
 
-## Development server
+### Prerequisites:
+- Firebase Account
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Run: 
+- `npm install`
+- `npm run`
 
-## Code scaffolding
+go to http://localhost:4200
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Firebase Collection:
 
-## Build
+Collection: `User`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Document:
+````json
+{
+ "id": "string",
+ "firstName": "string",
+ "lastName": "string"
+}
+````
