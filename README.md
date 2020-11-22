@@ -1,7 +1,7 @@
 # Angular 10 Starter (NGRX, Lazy Loading Modules, Feature States) 
 
-A simple app with basic navigation. You can find lists and detail views in user module.
-The architecture is feature based, which in my opinion is a better approach than layer based.
+A simple app with basic navigation. You can find list and detail views in the user module.
+The architecture is feature based, which in my opinion is a better approach than the common seen layer based architecture.
 
 ### Prerequisites:
 - Firebase Account
