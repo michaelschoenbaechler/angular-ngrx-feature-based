@@ -5,12 +5,13 @@ The architecture is feature based, which in my opinion is a better approach than
 
 ### Prerequisites
 - Firebase Account with user collection (as described below)
+- Change the firebase config in environment.ts 
 
 ### Run
 - `npm install`
 - `npm start`
 
-go to http://localhost:4200
+Go to http://localhost:4200
 
 ### Required Firebase Data
 
